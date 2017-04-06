@@ -1,0 +1,43 @@
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background: $bg-primary;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  width: 1110px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 40px 0;
+
+  .widget {
+    border: 1px solid $bg-secondary;
+    margin: 0 0 30px 0;
+
+    h2 {
+      &.widget-title {
+        background: $bg-secondary;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        color: $color-secondary;
+        text-transform: uppercase;
+        padding: 10px;
+      }
+    }
+
+    .textwidget {
+      padding: 10px;
+
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+}
