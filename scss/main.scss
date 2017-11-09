@@ -33,3 +33,131 @@
 // Themes
 @import "themes/theme";
 @import "themes/admin";
+
+
+
+// var
+$button-bg-primary: red;
+$button-bg-secondary: blue;
+$button-bg-default: green;
+
+$border-primary: grey;
+
+$color-white: white;
+$color-black: black;
+$color-grey: grey;
+
+$spacing: 5px;
+
+// mixin - transition
+@mixin transition($transition) {
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -webkit-transition: $transition;
+    transition: $transition;
+}
+
+// extend - button styling
+%button {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0 25px;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    cursor: pointer;
+}
+
+// mixin - button
+@mixin button($button-background, $button-color, $border-color) {
+    background: $button-background;
+    border: 1px solid $border-color;
+    color: $button-color;
+
+    &:hover {
+        background: darken($button-background, 8%);
+        border: 1px solid $border-color;
+        color: $button-color;
+    }
+}
+
+.contact { //block
+	&__button { //element
+        @extend %button;
+
+        &--primary { //modifier
+            @include button($button-bg-primary, $color-black, transparent);
+        }
+
+        &--secondary {
+            @include button($button-bg-secondary, $color-white, transparent);
+        }
+
+        &--default {
+            @include button($button-bg-default, $color-black, transparent);
+        }
+    }
+}
+
+.btn { //block
+    @extend %button;
+
+    &--primary { //modifier
+        @include button($button-bg-primary, $color-black, $border-primary);   
+    }
+}
+
+// menu
+.menu { //block
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__item { //element
+        @include transition(all 0.5s);
+        background-color: $button-bg-primary;
+        display: inline;
+        margin: 0 $spacing;
+
+        &:hover {
+            background-color: $button-bg-secondary;
+        }
+    }
+
+    &__link { //element
+        display: inline-block;
+        color: $color-white;
+        text-decoration: none;
+        padding-right: $spacing * 2;
+        padding-left: $spacing * 2;
+
+        &--contact {  //modifier
+            color: $color-black;
+        }
+    }
+}
+
+// news {
+.news { //block
+    &__title { //element
+        font-size: 40px;
+        color: $color-black;
+        text-decoration: underline;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    &__read-more { //element
+        background-color: $button-bg-secondary;
+        color: $color-white;
+
+        &--more-information { //modifier
+            color: $color-black;
+        }
+    }
+}

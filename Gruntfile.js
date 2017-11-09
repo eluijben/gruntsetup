@@ -33,6 +33,9 @@ module.exports = function(grunt) {
             styles: {
                 files: ['scss/**/*.scss'],
                 tasks: ['sass']
+            },
+            options: {
+                livereload: true
             }
         },
         sass: {
@@ -49,6 +52,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-sass');
-
+    
     grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'sass', 'watch']);
 };
