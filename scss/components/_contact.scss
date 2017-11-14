@@ -1,0 +1,18 @@
+.contact { //block
+	&__button { //element
+        @extend %button;
+
+        &--primary { //modifier
+            @include button($button-bg-primary, $color-black, transparent);
+        }
+
+        &--secondary {
+            @include button($button-bg-secondary, $color-white, transparent);
+        }
+
+        &--default {
+            @include button($button-bg-default, $color-black, transparent);
+        }
+    }
+}
+
