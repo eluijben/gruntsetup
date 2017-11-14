@@ -1,0 +1,7 @@
+.btn { //block
+    @extend %button;
+
+    &--primary { //modifier
+        @include button($button-bg-primary, $color-black, $border-primary);   
+    }
+}

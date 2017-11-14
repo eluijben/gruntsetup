@@ -1,0 +1,33 @@
+
+
+// menu
+.menu { //block
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__item { //element
+        @include transition(all 0.5s);
+        background-color: $button-bg-primary;
+        display: inline;
+        margin: 0 $spacing;
+
+        &:hover {
+            background-color: $button-bg-secondary;
+        }
+    }
+
+    &__link { //element
+        display: inline-block;
+        color: $color-white;
+        text-decoration: none;
+        padding-right: $spacing * 2;
+        padding-left: $spacing * 2;
+
+        &--contact {  //modifier
+            color: $color-black;
+        }
+    }
+}

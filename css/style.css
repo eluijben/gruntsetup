@@ -45,7 +45,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.contact__button, .btn {
+.btn, .contact__button {
   display: inline-block;
   border-radius: 5px;
   padding: 0 25px;
@@ -53,6 +53,38 @@ table {
   line-height: 40px;
   outline: none;
   cursor: pointer; }
+
+.menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+.menu__item {
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: red;
+  display: inline;
+  margin: 0 5px; }
+  .menu__item:hover {
+    background-color: blue; }
+.menu__link {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding-right: 10px;
+  padding-left: 10px; }
+  .menu__link--contact {
+    color: black; }
+
+.btn--primary {
+  background: red;
+  border: 1px solid grey;
+  color: black; }
+  .btn--primary:hover {
+    background: #d60000;
+    border: 1px solid grey;
+    color: black; }
 
 .contact__button--primary {
   background: red;
@@ -77,38 +109,6 @@ table {
   .contact__button--default:hover {
     background: #005700;
     border: 1px solid transparent;
-    color: black; }
-
-.btn--primary {
-  background: red;
-  border: 1px solid grey;
-  color: black; }
-  .btn--primary:hover {
-    background: #d60000;
-    border: 1px solid grey;
-    color: black; }
-
-.menu__list {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-.menu__item {
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  background-color: red;
-  display: inline;
-  margin: 0 5px; }
-  .menu__item:hover {
-    background-color: blue; }
-.menu__link {
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  padding-right: 10px;
-  padding-left: 10px; }
-  .menu__link--contact {
     color: black; }
 
 .news__title {

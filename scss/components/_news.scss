@@ -1,0 +1,22 @@
+// news {
+.news { //block
+    &__title { //element
+        font-size: 40px;
+        color: $color-black;
+        text-decoration: underline;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    &__read-more { //element
+        background-color: $button-bg-secondary;
+        color: $color-white;
+
+        &--more-information { //modifier
+            color: $color-black;
+        }
+    }
+}
